@@ -1,0 +1,32 @@
+<html>
+  <style>
+    td:last-child {
+      cursor: pointer;
+    }
+    .verde {
+      background-color: green;
+      color: white;
+    }
+  </style>
+  <head>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#ocultar").click(function () {
+          $("img").fadeOut();
+        });
+
+        $("#mostrar").click(function () {
+          $("img").fadeIn();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+    <img src="imagen.jpeg" />
+  </p>
+    <input type="button" value="mostrar" id="mostrar" />
+    <input type="button" value="ocultar" id="ocultar" />
+  </body>
+</html>
