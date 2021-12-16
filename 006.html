@@ -1,0 +1,37 @@
+<html>
+    <style>
+    .rojo {
+        color:red;
+    }
+    p {
+        cursor: pointer;
+    }
+</style>
+    <head>
+        <script type="text/javascript" src="jquery-3.6.0.js">
+        </script>
+        <script type="text/javascript">
+
+                $(document).ready(function() {
+                 
+                    $("#antes").click(function() {
+                       
+                        $("#miparrafo").prepend("<p>parrafo anterior</p>");
+                    })
+                    
+                    $("#despues").click(function() {
+                       
+                       $("#miparrafo").append("<p>parrafo anterior</p>");
+                   })
+                   
+                })
+        </script>
+    </head>
+    <body>
+        <p id="miparrafo">hola que tal</p>
+        <input type="button" value="antes" id="antes"/>
+        <input type="button" value="despues" id="despues"/>
+
+        
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    <style>
+    .rojo {
+        color:red;
+    }
+    p {
+        cursor: pointer;
+    }
+</style>
+    <head>
+        <script type="text/javascript" src="jquery-3.6.0.js">
+        </script>
+        <script type="text/javascript">
+
+                $(document).ready(function() {
+                 
+                    $("#mitabla input").click(function() {
+
+                       var borrar= confirm("¿Quieres borrar la fila?");
+                       console.log(borrar);
+                       if(borrar) {
+
+                          $(this).parent().parent().remove();
+                       }
+                    })
+                   
+                   
+                })
+        </script>
+    </head>
+    <body>
+       
+        <table id="mitabla">
+            <tr>
+                <td>texto1</td>
+                <td>texto1</td>
+                <td>texto1</td>
+                <td><input type="button" value="borrar"/></td>
+            </tr>
+            <tr>
+                <td>texto2</td>
+                <td>texto2</td>
+                <td>texto2</td>
+                <td><input type="button" value="borrar"/></td>
+            </tr>
+            <tr>
+                <td>texto3</td>
+                <td>texto3</td>
+                <td>texto3</td>
+                <td><input type="button" value="borrar"/></td>
+            </tr>
+            <tr>
+                <td>texto4</td>
+                <td>texto4</td>
+                <td>texto4</td>
+                <td><input type="button" value="borrar"/></td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

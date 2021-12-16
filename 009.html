@@ -1,0 +1,47 @@
+<html>
+  <style>
+    .rojo {
+      color: red;
+    }
+    p {
+      cursor: pointer;
+    }
+    .verde {
+      background-color: green;
+      color: white;
+    }
+  </style>
+  <head>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#pulsar").click(function () {
+          $("td").each(function (e) {
+            let numero = parseInt($(this).text());
+            if (numero >= 5) {
+              $(this).addClass("verde");
+            }
+          });
+        });
+      });
+
+    
+
+
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>5</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1</td>
+      </tr>
+    </table>
+
+    <input type="button" value="pulsar" id="pulsar" />
+  </body>
+</html>

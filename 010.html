@@ -1,0 +1,66 @@
+<html>
+  <style>
+    td:last-child {
+      cursor: pointer;
+    }
+    .verde {
+      background-color: green;
+      color: white;
+    }
+  </style>
+  <head>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("td:last-child").click(function () {
+          $(this).toggleClass("verde");
+          let total = 0;
+          $(".verde").each(function () {
+            total = total + parseInt($(this).text());
+          });
+          $("tfoot td:last").html(total);
+        });
+
+        $("#pulsar").click(function () {
+         
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Nota</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Nota</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Nota</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Nota</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Nota</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Nota</td>
+        <td>2</td>
+      </tr>
+      <tfoot>
+        <tr>
+          <td>Suma</td>
+          <td>0</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <input type="button" value="pulsar" id="pulsar" />
+  </body>
+</html>
