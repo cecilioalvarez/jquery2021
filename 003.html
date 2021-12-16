@@ -1,0 +1,28 @@
+<html>
+    <style>
+    .rojo {
+        color:red;
+    }
+</style>
+    <head>
+        <script type="text/javascript" src="jquery-3.6.0.js">
+        </script>
+        <script type="text/javascript">
+
+                $(document).ready(function() {
+                    $("#miboton1").click(function() {
+                       $("p").addClass("rojo");
+                    })
+
+                    $("#miboton2").click(function() {
+                       $("p").removeClass("rojo");
+                    })
+                })
+        </script>
+    </head>
+    <body>
+        <p>hola que tal</p>
+        <input type="button" value="poner rojo" id="miboton1"/>
+        <input type="button" value="quitar rojo" id="miboton2"/>
+    </body>
+</html>

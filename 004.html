@@ -1,0 +1,29 @@
+<html>
+    <style>
+    .rojo {
+        color:red;
+    }
+</style>
+    <head>
+        <script type="text/javascript" src="jquery-3.6.0.js">
+        </script>
+        <script type="text/javascript">
+
+                $(document).ready(function() {
+                    $("#miboton1").click(function() {
+                      
+                        for (var i=0;i<10;i++) {
+                            $("body").append("<p>"+ i+"</p>");
+                        }
+                    })
+
+                   
+                })
+        </script>
+    </head>
+    <body>
+        <p>hola que tal</p>
+        <input type="button" value="generar lista" id="miboton1"/>
+       
+    </body>
+</html>
