@@ -1,0 +1,45 @@
+<html>
+  <style>
+    td:last-child {
+      cursor: pointer;
+    }
+    .verde {
+      background-color: green;
+      color: white;
+    }
+  </style>
+  <head>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".mas").click(function () {
+          let $tdNumero = $(this).parent().prev();
+          let numero = parseInt($tdNumero.text());
+          if(numero<10) $tdNumero.text(numero + 1);
+        });
+
+        $(".menos").click(function () {
+          let $tdNumero = $(this).parent().prev().prev();
+          let numero = parseInt($tdNumero.text());
+          if(numero>0) $tdNumero.text(numero - 1);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>pedro</td>
+        <td>5</td>
+        <td><input type="button" value="+" class="mas" /></td>
+        <td><input type="button" value="-" class="menos" /></td>
+      </tr>
+      <tr>
+        <td>ana</td>
+        <td>7</td>
+        <td><input type="button" value="+" class="mas" /></td>
+        <td><input type="button" value="-" class="menos" /></td>
+      </tr>
+    </table>
+  </body>
+</html>

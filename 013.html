@@ -1,0 +1,48 @@
+<html>
+  <style>
+    td:last-child {
+      cursor: pointer;
+    }
+    .verde {
+      background-color: green;
+      color: white;
+    }
+  </style>
+  <head>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".editar").click(function () {
+          let boton = $(this);
+          let $tdNumero = boton.parent().prev();
+          let numero = $tdNumero.text();
+
+          if (boton.val() == "editar") {
+            boton.val("aceptar");
+            $tdNumero.replaceWith(
+              "<td><input type='text' value='" + numero + "'/></td>"
+            );
+          } else {
+
+            boton.val("editar");
+            $tdNumero.replaceWith("<td>"+$tdNumero.find("input").val()+"</td>");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>pedro</td>
+        <td>5</td>
+        <td><input type="button" value="editar" class="editar" /></td>
+      </tr>
+      <tr>
+        <td>ana</td>
+        <td>7</td>
+        <td><input type="button" value="editar" class="editar" /></td>
+      </tr>
+    </table>
+  </body>
+</html>
